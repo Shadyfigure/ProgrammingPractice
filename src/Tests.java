@@ -2,11 +2,34 @@ import sorting.MergeSort;
 import sorting.QuickSort;
 import java.util.*;
 
+import generate.GeneratePermutations;
 import generate.GenerateUnique;
+import helpers.MissingMathFunctions;
 import search.FindTheTwos;
 
 public class Tests 
 {
+	//careful with your string input
+	//calculating all permutations takes n! time
+	//can get very long
+	public static void permutationsTest()
+	{
+		System.out.println("Running: Permutations Test");
+		
+		String input = "fgabtkd";
+		GeneratePermutations permGen = new GeneratePermutations();
+		String[] permutations = permGen.createPermutations(input);
+		
+		int i = 1;
+		for(String perm : permutations)
+		{
+			System.out.println(i + ": " + perm);
+			i++;
+		}
+		
+		System.out.println("Total should be: " + MissingMathFunctions.factorialOf(input.length()));
+	}
+	
 	/*
 	 * In an unordered list of unique integers of any size, generate a value that it does not contain.
 	 * 
