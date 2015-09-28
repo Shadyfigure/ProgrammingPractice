@@ -1,4 +1,4 @@
-package searches;
+package search;
 
 public class FindTheTwos 
 {	

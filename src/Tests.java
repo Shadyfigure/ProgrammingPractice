@@ -3,11 +3,17 @@ import sorting.QuickSort;
 import java.util.*;
 
 import generate.GenerateUnique;
-import searches.FindTheTwos;
+import search.FindTheTwos;
 
 public class Tests 
 {
-	//in an unordered list of unique integers of any size, generate a value that it does not contain
+	/*
+	 * In an unordered list of unique integers of any size, generate a value that it does not contain.
+	 * 
+	 * Extra prints are used to get a better idea of when the unique number generation actually starts since
+	 * building the test array can take some time with supplied Java functions. Using supplied functions for
+	 * better assurance that test will be valid.
+	*/
 	public static void uniqueIntegerTest()
 	{
 		System.out.println("Running: Unique Number Find");

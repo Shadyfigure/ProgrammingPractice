@@ -7,6 +7,8 @@ public class GenerateUnique
 	//generate a number not contained therein
 	public int findUniqueInt(int[] nums)
 	{
+		//may want to check that nums is valid here
+		
 		int temp = nums[0];
 		
 		for(int i = 1; i < nums.length; i++)
