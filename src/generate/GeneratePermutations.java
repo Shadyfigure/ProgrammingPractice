@@ -17,6 +17,7 @@ public class GeneratePermutations
 		
 		String[] permutationsArr = new String[permutations.size()];
 		
+		//convert to string array for return
 		int i = 0;
 		for(String perm : permutations)
 		{
@@ -27,22 +28,29 @@ public class GeneratePermutations
 		return permutationsArr;
 	}
 	
+	//creating permutations is like traversing a tree
+	//each level down has +1 branches compared to the level before it
 	private void createPermutations(String letters, int currL, String perm)
 	{
-		if(currL >= letters.length())
+		if(currL >= letters.length())//if we've used all the letters, add the permutation
 		{
 			permutations.add(perm);
 		}
-		else
+		else//continue adding letters one at a time
 		{
+			//every time we add a letter we add that number of branches
 			for(int i = 0; i <= currL; i++)
 			{
+				//move down a level/use the next letter
+				//need to recurse for each of the permutation potentials
 				createPermutations(letters, currL+1, 
 								insertLetterAt(perm, letters.charAt(currL), i));
 			}
 		}
 	}
 	
+	//"base case"
+	//insert a letter to a specific location in a string
 	private String insertLetterAt(String perm, char letter, int loc)
 	{
 		char[] temp = new char[perm.length() + 1];
