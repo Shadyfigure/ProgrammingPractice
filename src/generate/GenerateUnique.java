@@ -1,5 +1,6 @@
 package generate;
 
+//playing with XOR --- CURRENTLY DOES NOT WORK
 public class GenerateUnique 
 {
 	//list has only unique values
@@ -13,6 +14,12 @@ public class GenerateUnique
 		//if the first number == the temp number than we've hit every possible number
 		
 		int temp = nums[0];
+		int largest = 0;
+		for(int i : nums)
+		{
+			if (i > largest)
+				largest = i;
+		}
 		
 		for(int i = 1; i < nums.length; i++)
 		{

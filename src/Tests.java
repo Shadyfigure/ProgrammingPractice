@@ -43,6 +43,7 @@ public class Tests
 		System.out.println("Building: Test List");
 		//create a list of unique numbers
 		//In the future I'd probably use the method I'm testing because this takes forever for large sets.
+		
 		int length = 100000;
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		for(int i = 0; i < length; i++)
@@ -62,14 +63,28 @@ public class Tests
 			j++;
 		}
 		
+		
+		/* small batch test
+		int[] list = {0,1,2,3,5,6,7,9,10,11,12,13,14};
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		for(int i : list)
+		{
+			nums.add(i);
+		}*/
+				
 		GenerateUnique findUnique = new GenerateUnique();
 		System.out.println("Generating the number");
 		int uniqueNum = findUnique.findUniqueInt(list);
-		System.out.println("Found. Now checking.");
+		
+		System.out.println("Checking: " + uniqueNum);
 		
 		if(!nums.contains(uniqueNum))
 		{
-			System.out.println("Unique number: " + uniqueNum);
+			System.out.println("Unique number.");
+		}
+		else
+		{
+			System.out.println("Not Unique.");
 		}
 	}
 	
