@@ -23,12 +23,12 @@ public class QuickSort
 		int pivot = list[hi];
 		int part = low;
 		
-		for(int j = low; j < hi; j++)
+		for(int i = low; i < hi; i++)
 		{
-			if(list[j] <= pivot)
+			if(list[i] <= pivot)
 			{
-				int temp = list[j];
-				list[j] = list[part];
+				int temp = list[i];
+				list[i] = list[part];
 				list[part] = temp;
 				
 				part++;
